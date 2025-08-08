@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Denotes Required Information</title>
+  <style>
+    body {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/008/022/380/non_2x/floral-background-with-pastel-color-free-vector.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: brown;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 40px;
+      border-radius: 12px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: middle;
+      text-align: left;
+    }
+
+    td.label {
+      width: 200px;
+      font-weight: bold;
+      padding-right: 20px;
+      text-align: right;
+    }
+
+    td.input {
+      width: calc(100% - 220px);
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 16px;
+      background-color: rgb(0, 33, 221);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: darkblue;
+    }
+
+    h1 {
+      color: rgb(0, 33, 221);
+    }
+
+    p.note {
+      color: rgb(255, 5, 5);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-container label {
+      display: inline-block;
+      margin: 0 15px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+   
+    .checkbox-label {
+      margin: 10px 0;
+      display: block;
+      text-align: left;
+    }
+
+    .checkbox-label input {
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>1 Donation &gt; 2 Confirmation &gt; Thank You!</h1>
+    <p>Donor Information</p>
+
+    <form id="donationForm">
+
+      <table>
+        <tr>
+          <td class="label">First Name :</td>
+          <td class="input"><input type="text" name="firstName" required></td>
+        </tr>
+        <tr>
+          <td class="label">Last Name :</td>
+          <td class="input"><input type="text" name="lastName" required></td>
+        </tr>
+        <tr>
+          <td class="label">Password :</td>
+          <td class="input"><input type="text" name="Password" required></td>
+        </tr>
+        <tr>
+          <td class="label">Company :</td>
+          <td class="input"><input type="text" name="company"></td>
+        </tr>
+        <tr>
+          <td class="label">Address 1 :</td>
+          <td class="input"><input type="text" name="address1" required></td>
+        </tr>
+        <tr>
+          <td class="label">Address 2 :</td>
+          <td class="input"><input type="text" name="address2"></td>
+        </tr>
+        <tr>
+          <td class="label">City :</td>
+          <td class="input"><input type="text" name="city" required></td>
+        </tr>
+        <tr>
+          <td class="label">State :</td>
+          <td class="input">
+            <select name="state">
+              <option>Select a State</option>
+              <option>NewYork</option>
+              <option>LasVegas</option>
+              <option>California</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Zipcode :</td>
+          <td class="input"><input type="text" name="zipcode"></td>
+        </tr>
+        <tr>
+          <td class="label">Country :</td>
+          <td class="input">
+            <select name="country">
+              <option>Select a Country</option>
+              <option>Bangladesh</option>
+              <option>Canada</option>
+              <option>United States</option>
+              <option>Japan</option>
+              <option>England</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Phone :</td>
+          <td class="input"><input type="text" name="phone" required></td>
+        </tr>
+        <tr>
+          <td class="label">Fax :</td>
+          <td class="input"><input type="text" name="fax"></td>
+        </tr>
+        <tr>
+          <td class="label">Email :</td>
+          <td class="input"><input type="email" id="email" name="email" required></td>
+        </tr>
+
+        <tr>
+          <td class="label">Donation Amount :</td>
+          <td class="input">
+            <label><input type="radio" name="donationAmount" value="None">None</label>
+            <label><input type="radio" name="donationAmount" value="50">$50</label>
+            <label><input type="radio" name="donationAmount" value="75">$75</label>
+            <label><input type="radio" name="donationAmount" value="100">$100</label>
+            <label><input type="radio" name="donationAmount" value="250">$250</label>
+            <label><input type="radio" name="donationAmount" value="Other">Other</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Other Amount :</td>
+          <td class="input"><input type="text" name="otherAmount"></td>
+        </tr>
+
+        <tr>
+          <td class="label">Recurring Donation :</td>
+          <td class="input">
+            <label><input type="checkbox" name="recurring"> I am interested in giving on a regular basis.</label>
+          </td>
+        </tr>
+      </table>
+
+      <h1>Honour and Memorial Donation Information</h1>
+
+      <table>
+        <tr>
+          <td class="label">I would like to make this donation</td>
+          <td class="input">
+            <label><input type="radio" name="donationType" value="honor">To honor</label>
+            <label><input type="radio" name="donationType" value="memory">In Memory of</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Name :</td>
+          <td class="input"><input type="text" name="honorName" required></td>
+        </tr>
+        <tr>
+          <td class="label">Acknowledge Donation To :</td>
+          <td class="input"><input type="text" name="acknowledgeName"></td>
+        </tr>
+        <tr>
+          <td class="label">Address :</td>
+          <td class="input"><input type="text" name="honorAddress" required></td>
+        </tr>
+        <tr>
+          <td class="label">City :</td>
+          <td class="input"><input type="text" name="honorCity" required></td>
+        </tr>
+        <tr>
+          <td class="label">State :</td>
+          <td class="input">
+            <select name="honorState">
+              <option>Select a State</option>
+              <option>NewYork</option>
+              <option>LasVegas</option>
+              <option>California</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Zip :</td>
+          <td class="input"><input type="text" name="honorZip"></td>
+        </tr>
+      </table>
+
+      <h1>Additional Information</h1>
+
+      <p class="note">
+        Please enter your name, company or organization as you would like it to appear in our publications:
+      </p>
+
+      <table>
+        <tr>
+          <td class="label">Name :</td>
+          <td class="input"><input type="text" name="additionalName" required></td>
+        </tr>
+      </table>
+
+      <p class="checkbox-label">
+        <label><input type="checkbox" name="anonymousGift"> I would like my gift to remain anonymous.</label>
+      </p>
+      <p class="checkbox-label">
+        <label><input type="checkbox" name="matchingGift"> My employer offers a matching gift program. I will mail the matching gift form.</label>
+      </p>
+      <p class="checkbox-label">
+        <label><input type="checkbox" name="noThanksMail"> Please save the cost of acknowledge this gift by not mailing a thank you later.</label>
+      </p>
+
+      <table>
+        <tr>
+          <td class="label">Comments :</td>
+          <td class="input"><textarea name="comments" rows="4" required></textarea></td>
+        </tr>
+      </table>
+
+      <p>(please type any questions for feedback)</p>
+
+      <table>
+        <tr>
+          <td class="label">How may we contact you?</td>
+          <td class="input">
+            <label><input type="checkbox" name="contactEmail">E-mail</label><br>
+            <label><input type="checkbox" name="contactPostal">Postal Mail</label><br>
+            <label><input type="checkbox" name="contactPhone">Telephone</label><br>
+            <label><input type="checkbox" name="contactFax">Fax</label><br>
+          </td>
+        </tr>
+      </table>
+
+      <p class="note">I would like to receive newsletters and information about special events by :</p>
+      <p style="text-align: center; margin-bottom: 20px;">
+        <span style="display: inline-block; text-align: left;">
+          <label style="display: flex; align-items: center; margin-bottom: 6px; font-weight: normal; cursor: pointer;">
+            <input type="checkbox" name="newsletterEmail" style="margin-right: 8px;"> <span>E-mail</span>
+          </label>
+          <label style="display: flex; align-items: center; font-weight: normal; cursor: pointer;">
+            <input type="checkbox" name="newsletterPostal" style="margin-right: 8px;"> <span>Postal Mail</span>
+          </label>
+        </span>
+      </p>
+
+      <p class="checkbox-label">
+        <label><input type="checkbox" name="volunteerInfo">I would like information about volunteering with the</label>
+      </p>
+
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+
+    </form>
+
+  </div>
+
+  <script>
+    
+    const donationRadios = document.querySelectorAll('input[name="donationAmount"]');
+    const otherAmountRow = document.querySelector('input[name="otherAmount"]').parentElement.parentElement;
+
+    donationRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        if (this.value === 'Other') {
+          otherAmountRow.style.display = '';
+        } else {
+          otherAmountRow.style.display = 'none';
+          otherAmountRow.querySelector('input[name="otherAmount"]').value = '';
+        }
+      });
+    });
+
+    
+    document.getElementById('donationForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const firstName = document.querySelector('input[name="firstName"]').value.trim();
+      const lastName = document.querySelector('input[name="lastName"]').value.trim();
+      const password = document.querySelector('input[name="Password"]').value;
+      const email = document.querySelector('input[name="email"]').value.trim();
+
+      if (firstName === '' || lastName === '') {
+        alert('Please enter both your first and last names.');
+        return;
+      }
+
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters.');
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      let donationSelected = false;
+      let donationValue = '';
+      donationRadios.forEach(radio => {
+        if (radio.checked) {
+          donationSelected = true;
+          donationValue = radio.value;
+        }
+      });
+
+      if (!donationSelected) {
+        alert('Please select a donation amount.');
+        return;
+      }
+
+      if (donationValue === 'Other') {
+        const otherAmount = document.querySelector('input[name="otherAmount"]').value.trim();
+        if (otherAmount === '' || isNaN(otherAmount) || Number(otherAmount) <= 0) {
+          alert('Please enter a valid amount for "Other".');
+          return;
+        }
+      }
+
+      
+      window.location.href = 'thank-you.html';
+    });
+
+    
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    
+    const stateSelect = document.querySelector('select[name="state"]');
+    const newOption = document.createElement('option');
+    newOption.text = "Texas";
+    newOption.value = "Texas";
+    stateSelect.appendChild(newOption);
+  </script>
+
+</body>
+
+</html>
